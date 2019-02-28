@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#f5f5f5</color>
+    <color name="gray">#acacac</color>
+    <color name="blue_grey">#546E7A</color>
+    <color name="green">#388e3c</color>
+    <color name="greenMelo">#72a375</color>
+
+<!--
+    <color name="primaryColor1">#2e7d32</color>
+    <color name="primaryLightColor1">#60ad5e</color>
+    <color name="primaryDarkColor1">#005005</color>
+    <color name="secondaryColor">#004d40</color>
+    <color name="secondaryLightColor">#39796b</color>
+
+
+    <color name="primaryColor">#9e9d24</color>
+    <color name="primaryLightColor">#d2ce56</color>
+    <color name="primaryDarkColor">#6c6f00</color>
+    <color name="secondaryColor1">#004c3f</color>
+    <color name="secondaryLightColor1">#38786a</color>-->
+
+<!--
+    <color name="primaryColor">#757575</color>
+    <color name="primaryLightColor">#a4a4a4</color>
+    <color name="primaryDarkColor">#494949</color>
+    <color name="secondaryColor">#880e4f</color>
+    <color name="secondaryLightColor">#bc477b</color>
+    <color name="secondaryDarkColor">#560027</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>-->
+
+<!--
+    <color name="primaryLightColor">#73e8ff</color>
+    <color name="primaryLightColor2">#baf7ff</color>
+    <color name="primaryDarkColor">#0086c3</color>
+    <color name="secondaryColor">#ef5350</color>
+    <color name="secondaryLightColor">#ff867c</color>
+    <color name="secondaryDarkColor">#b61827</color>
+    <color name="primaryTextColor">#fafafa</color>
+    <color name="secondaryTextColor">#000000</color>-->
+
+
+    <color name="primaryColor">#64b5f6</color>
+    <color name="primaryColorDark">#42a5f5</color>
+    <color name="primaryLightColor">#80d6ff</color>
+    <color name="primaryDarkColor">#0077c2</color>
+    <color name="secondaryColor">#ef5350</color>
+    <color name="secondaryLightColor">#ff867c</color>
+    <color name="secondaryDarkColor">#b61827</color>
+    <color name="primaryTextColor">#fafafa</color>
+    <color name="secondaryTextColor">#fafafa</color>
+    <color name="black">#212121</color>
+</resources>

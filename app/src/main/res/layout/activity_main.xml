@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto">
+
+    <com.cedarstudios.cedarmapssdk.MapView
+        android:id="@+id/maps"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:mapbox_cameraZoom="14"
+        app:mapbox_cameraTargetLat = "35.7575"
+        app:mapbox_cameraTargetLng = "51.4098"
+        />
+
+    <ImageView
+        android:id="@+id/imageMarkerMap"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        mapbox:srcCompat="@drawable/marker_start"
+        tools:ignore="ContentDescription" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/parent_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/_15sdp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/ic_search_close"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:padding="@dimen/_3sdp"
+                app:srcCompat="@drawable/ic_arrow_up"
+                android:layout_alignTop="@id/edit_search"
+                android:layout_alignBottom="@id/edit_search"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/_3sdp"/>
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edit_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:hint="@string/search"
+                android:layout_toLeftOf="@id/ic_search_close"
+                android:background="@drawable/background_edit_text"
+                android:padding="@dimen/_8sdp"
+                android:gravity="right"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:visibility="visible"
+        app:cardCornerRadius="@dimen/_8sdp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_13ssp"
+            android:text="@string/search"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+
+
+    </android.support.v7.widget.CardView>
+    <LinearLayout
+        android:id="@+id/card_origin_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            app:cardBackgroundColor="@color/primaryColorDark"
+            app:cardCornerRadius="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:elevation="@dimen/_8sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_4sdp">
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/markerClose"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:tint="@color/secondaryDarkColor"
+                    app:srcCompat="@drawable/ic_close"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:padding="@dimen/_4sdp"
+                    >
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/resultLocStart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_8sdp"
+                        android:gravity="right"
+                        android:textSize="@dimen/_13ssp"
+                        android:singleLine="true"
+                        android:background="@drawable/background_text_view"
+                        android:ellipsize="end"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_8sdp"
+                        android:gravity="right"
+                        android:textSize="@dimen/_13ssp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:text="مبدا"
+                        android:ellipsize="marquee"
+                        android:maxLength="28"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_4sdp"
+                    android:weightSum="1"
+                    >
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/resultLocEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:padding="@dimen/_8sdp"
+                        android:gravity="right"
+                        android:textSize="@dimen/_13ssp"
+                        android:singleLine="true"
+                        android:background="@drawable/background_text_view"
+                        android:ellipsize="end"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_8sdp"
+                        android:gravity="right"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp"
+                        android:singleLine="true"
+                        android:text="مقصد"
+                        android:ellipsize="end"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/_5sdp"
+            app:srcCompat="@drawable/ic_gps"
+            android:tint="@android:color/white"
+            app:backgroundTint="@color/secondaryDarkColor"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_Distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_4sdp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/primaryColor">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/distanceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp"
+                android:gravity="left"
+                android:text="dasdasd"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"
+                android:layout_marginBottom="@dimen/_5sdp"/>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/search_results_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:visibility="gone"
+        android:layout_below="@id/parent_search"
+        >
+
+        <ProgressBar
+            android:id="@+id/search_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:id="@+id/recyclerView"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

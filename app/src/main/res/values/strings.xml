@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RahpaProject</string>
+
+    <string name="comma"> ، </string>
+    <string name="province">استان</string>
+    <string name="search">جستوجو</string>
+    <string name="enabled">مکان یاب شما روشن است</string>
+    <string name="disabled">مکان یاب شما خاموش است</string>
+</resources>
